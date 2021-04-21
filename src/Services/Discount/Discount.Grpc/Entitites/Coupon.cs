@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Discount.Grpc.Entitites
+﻿namespace Discount.Grpc.Entitites
 {
     public class Coupon
     {
