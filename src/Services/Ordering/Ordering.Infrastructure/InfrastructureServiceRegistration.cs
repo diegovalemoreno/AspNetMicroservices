@@ -20,6 +20,13 @@ namespace Ordering.Infrastructure
             services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
             services.AddScoped<IOrderRepository, OrderRepository>();
 
+            var objChild = configuration.GetSection("EmailSettings").GetChildren();
+
+            foreach (var data in objChild)
+            {
+                
+            }
+
             services.Configure<EmailSettings>(c => configuration.GetSection("EmailSettings").GetChildren());
             services.AddTransient<IEmailService, EmailService>();
 
